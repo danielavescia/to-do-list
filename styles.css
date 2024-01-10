@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
 
 body {
   margin: 0;
@@ -8,8 +14,10 @@ body {
 
 .container {
   display: flex;
+  position: relative;
   padding-top: 2rem;
-  margin-left: 2rem;
+  padding-left: 2rem;
+  width: 100%;
 }
 
 /* NAVBAR */
@@ -18,91 +26,101 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 50%;
-}
-
-.img-container .menu-paragraph,
-.menu-title,
-.menu-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0px;
-  flex-wrap: wrap;
-  width: fit-content;
+  width: 18rem;
+  height: 100vh;
+  background-color: #df7861;
 }
 
 .img-avatar {
-  width: 75%;
+  width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
+.menu-title {
+  margin: 0 auto;
+  text-align: center;
+}
 .menu-title h1 {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 0;
-  color: #d4e2d4;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .menu-paragraph {
-  padding: 0.3rem;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.menu-paragraph p {
+.paragraph {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  text-align: center;
+  color: #ffffff;
   margin-top: 0 px;
   width: 50%;
 }
 
 .menu-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 0;
-  width: 35%;
+  width: 100%;
 }
 
 .menu-links ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 .menu-links ul li {
-  margin: 1.5rem 0px;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(252, 248, 232, 0.7);
+  border-top: 1px solid rgb(252, 248, 232, 0.781);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  height: auto;
+
+  &:hover {
+    background-color: #9bcdd2;
+    width: 100%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
 }
-.nav-item {
+
+.menu-links ul li .nav-item {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  text-decoration: none;
-  color: black;
+  color: #ffffff;
   margin: 1rem 0px;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
+  width: 100%;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
   &:hover {
-    color: #068da9;
+    width: 100%;
+    color: #ffffff;
   }
 }
 
 /* MAIN - TO DO LIST*/
 
-.content-container {
+.container .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-grow: 2;
-  background-color: #df7861;
+  width: max-content;
+  background-color: rgb(223, 120, 97);
+  border: 1px solid rgb(252, 248, 232, 0.7);
+  width: 97rem;
+  height: 100vh;
 }
 
 .content-container h1,
@@ -113,6 +131,8 @@ body {
   text-align: center;
   margin-bottom: 0;
   color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .list-container {

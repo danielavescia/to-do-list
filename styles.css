@@ -3,17 +3,22 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: #ecf8f9;
+  background-color: #fcf8e8;
 }
 
+.container {
+  display: flex;
+  padding-top: 2rem;
+  margin-left: 2rem;
+}
+
+/* NAVBAR */
 .menu-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 2rem;
-  margin-left: 2rem;
-  width: 35%;
+  width: 50%;
 }
 
 .img-container .menu-paragraph,
@@ -29,7 +34,7 @@ body {
 }
 
 .img-avatar {
-  width: 35%;
+  width: 75%;
   height: auto;
   border-radius: 50%;
 }
@@ -40,7 +45,7 @@ body {
   font-weight: bold;
   text-align: center;
   margin-bottom: 0;
-  color: #7e1717;
+  color: #d4e2d4;
 }
 
 .menu-paragraph {
@@ -52,7 +57,7 @@ body {
   font-size: 1rem;
   text-align: center;
   margin-top: 0 px;
-  width: 35%;
+  width: 50%;
 }
 
 .menu-links {
@@ -89,10 +94,68 @@ body {
   }
 }
 
+/* MAIN - TO DO LIST*/
+
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  flex-grow: 2;
+  background-color: #df7861;
+}
+
+.content-container h1,
+.list-container h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background-color: #ecb390;
+}
+
+.add-list {
+  width: 25rem;
+  height: 1.5rem;
+  border-color: #fcf8e8;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &:focus {
+    border-color: #d0f288;
+    box-shadow: #b1b8b1;
+  }
+}
+
+.btn-submit {
+  background-color: #068da9;
+  border-color: #068da9;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  transition: 0.3s ease-in-out;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7e1717;
+    border-color: #7e1717;
+  }
 }

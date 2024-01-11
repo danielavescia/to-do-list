@@ -18,6 +18,7 @@ const generateList = (list) => {
           done
           </span> 
       </button>
+    
       <button class="delete-button">
           <span class="material-symbols-outlined delete">
               delete
@@ -30,8 +31,7 @@ const generateList = (list) => {
   //adiciona na lista de tarefas de acordo com o horário
   if (dayRadio.checked) {
     ulListDay.innerHTML += html;
-  }
-  if (nightRadio.checked) {
+  } else if (nightRadio.checked) {
     ulListNight.innerHTML += html;
   }
 };
@@ -73,7 +73,7 @@ ulListDay.addEventListener("click", (e) => {
   }
 });
 
-//função para deletar/marcar feita a tarefa dia
+//função para deletar/marcar feita a tarefa noite
 ulListNight.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     const listItem = e.target.closest(".do-container");

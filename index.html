@@ -41,7 +41,7 @@
                         <li><a href="#" class="nav-item">Link 3</a></li>
                         <li><a href="#" class="nav-item">Link 4</a></li>
                         <li><a href="#" class="nav-item">Link 5</a></li>
-                        <li><a href="#" class="nav-item">Link 6</a></li>
+
                     </ul>
                 </div>
             </nav>
@@ -57,35 +57,37 @@
                 <div class="input-container">
 
                     <form class="add-list">
-                        <label for="add">Adicionar Tarefa: </label>
-                        <input type="text" name="add" id="add" required />
+                        <input type="text" name="add" id="add" class="input-list"
+                            placeholder="Digite uma tarefa aqui..." required aria-placeholder="Adicionar Tarefa" />
                     </form>
+
 
                     <button id="do-button"><span class="material-symbols-outlined">
                             add
                         </span></button>
+
                     <form id="timeDay">
                         <label>
                             <input class="checkbox" type="radio" name="period" value="day" id="dayRadio" checked> Dia
                         </label>
                         <label>
-                            <input class="checkbox" type="radio" name="period" value="night" id="nightRadio" checked>
+                            <input class="checkbox" type="radio" name="period" value="night" id="nightRadio">
                             Noite
                         </label>
                     </form>
+                </div>
+                <div class="list-container">
+                    <div class="day-container">
+                        <h2>Dia</h2>
+                        <ul class="day-to-do"></ul>
+                    </div>
 
-                    <div class="list-container">
-                        <div class="day-container">
-                            <h2>Dia</h2>
-                            <ul class="day-to-do"></ul>
-                        </div>
-
-                        <div class="nigth-container">
-                            <h2>Noite</h2>
-                            <ul class="night-to-do"></ul>
-                        </div>
+                    <div class="night-container">
+                        <h2>Noite</h2>
+                        <ul class="night-to-do"></ul>
                     </div>
                 </div>
+
         </main>
     </div>
     <script src="./app.js"></script>

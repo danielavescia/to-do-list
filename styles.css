@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
@@ -23,20 +25,23 @@ body {
 .menu-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 18rem;
   height: 100%;
   background-color: #df7861;
 }
 
+/* IMG */
 .img-avatar {
   width: 100%;
   height: auto;
   border-radius: 50%;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
+/* TEXT */
 .menu-title {
   margin: 0 auto;
   text-align: center;
@@ -45,7 +50,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -58,11 +63,15 @@ body {
 
 .paragraph {
   font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
   font-size: 1rem;
   color: #ffffff;
-  width: 50%;
+  width: 100%;
+  text-align: center;
 }
 
+/* LINKS */
 .menu-links {
   display: flex;
   margin-top: 0;
@@ -124,6 +133,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* CONTAINER */
 .container .content-container .input-container {
   display: flex;
   flex-direction: row;
@@ -136,6 +146,17 @@ body {
   background-color: rgb(198, 92, 68);
 }
 
+.content-container .list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 98%;
+  height: auto;
+  background-color: #df7861;
+}
+
+/* TITLE */
 .list-container,
 h1 {
   font-family: "Roboto", sans-serif;
@@ -149,6 +170,7 @@ h1 {
   padding: 2rem;
 }
 
+/* TITLE DAY AND NIGHT */
 .list-container,
 h2 {
   margin: 0px;
@@ -163,16 +185,7 @@ h2 {
   padding: 2rem;
 }
 
-.content-container .list-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 98%;
-  height: auto;
-  background-color: #df7861;
-}
-
+/* FORM - INPUT TO DO LIST*/
 .add-list {
   width: 25rem;
   height: 1.5rem;
@@ -182,6 +195,7 @@ h2 {
   font-weight: bold;
 }
 
+/* INPUT TO DO LIST*/
 #add {
   width: 25rem;
   height: 2.7rem;
@@ -194,11 +208,15 @@ h2 {
 
 .input-list {
   box-shadow: #df7861;
+  outline: none;
+  transition: border-color 0.3s;
+
   &:focus {
-    border-color: rgb(198, 92, 68);
+    border-color: 2px solid white;
   }
 }
 
+/* BUTTON - ADD TO DO LIST*/
 #do-button {
   background-color: #ffffff;
   border: none;
@@ -210,6 +228,7 @@ h2 {
   color: rgb(198, 92, 68);
 }
 
+/* RADIO - CHOOSE DAY TIME*/
 #timeDay {
   display: flex;
   flex-direction: row;
@@ -242,6 +261,7 @@ h2 {
   border-color: #df7861;
 }
 
+/* CONTAINER - TO DO LIST BY DAY TIME*/
 .day-container,
 .night-container {
   display: flex;
@@ -258,6 +278,7 @@ h2 {
   flex-wrap: wrap;
 }
 
+/* CONTAINER - UL TO DO LIST*/
 .do-container {
   display: flex;
   flex-direction: row;
@@ -315,4 +336,182 @@ ul {
 .done,
 .delete {
   color: #df7861;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container .content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgb(198, 92, 68);
+    border: 1px solid rgb(252, 248, 232, 0.7);
+    flex-wrap: wrap;
+  }
+
+  /* CONTAINER */
+  .container {
+    padding: 0;
+    display: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .img-avatar {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+
+  .content-container .input-container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100% auto;
+    padding: 1rem;
+    background-color: rgb(198, 92, 68);
+    flex-wrap: wrap;
+  }
+
+  .content-container .list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #df7861;
+    flex-wrap: wrap;
+  }
+
+  .day-container,
+  .night-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  #timeDay {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #timeDay label {
+    display: block;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 2.5rem;
+    font-style: bold;
+    color: rgb(198, 92, 68);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1699px) {
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .container .content-container {
+    display: flex;
+    flex-direction: column; /* Adjusted for responsiveness */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(198, 92, 68);
+    border: 1px solid rgb(252, 248, 232, 0.7);
+    flex-wrap: wrap;
+    padding: 1rem; /* Adjusted for responsiveness */
+  }
+
+  .img-avatar {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 2rem;
+    align-self: center;
+  }
+
+  .content-container .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(198, 92, 68);
+    flex-wrap: wrap;
+  }
+
+  .content-container .list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #df7861;
+    flex-wrap: wrap;
+  }
+
+  .day-container,
+  .night-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  #timeDay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #timeDay label {
+    display: block;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 2.5rem;
+    font-style: bold;
+    color: rgb(198, 92, 68);
+  }
 }

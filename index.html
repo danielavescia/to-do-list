@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="icon" type="image/png" href="./public/icon.png">
-
+    <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
@@ -22,18 +24,22 @@
         <!-- Navbar -->
         <header>
             <nav class="menu-container">
+                <!-- image -->
                 <div class="img-container">
                     <img src="./public/avatar-profile.png" alt="Avatar" class="img-avatar">
                 </div>
+                <!-- text -->
                 <div class="menu-title">
                     <h1>Lorem Ipsum</h1>
                 </div>
                 <div class="menu-paragraph">
-                    <p class="">Ut hendrerit sapien ligula, quis faucibus ligula convallis a. Curabitur tincidunt ex
+                    <p class="paragraph">Ut hendrerit sapien ligula, quis faucibus ligula convallis a. Curabitur
+                        tincidunt ex
                         leo, eu
                         feugiat
                         enim molestie commodo.</p>
                 </div>
+                <!-- links -->
                 <div class="menu-links">
                     <ul>
                         <li><a href="#" class="nav-item">Link 1</a></li>
@@ -56,16 +62,18 @@
                 <h1>Lista de Tarefas</h1>
                 <div class="input-container">
 
+                    <!-- Input to do list + button -->
                     <form class="add-list">
                         <input type="text" name="add" id="add" class="input-list"
-                            placeholder="Digite uma tarefa aqui..." required aria-placeholder="Adicionar Tarefa" />
+                            placeholder="Digite uma tarefa aqui..." required aria-placeholder="Adicionar Tarefa"
+                            autofocus />
                     </form>
-
 
                     <button id="do-button"><span class="material-symbols-outlined">
                             add
                         </span></button>
 
+                    <!-- Radio to choose daytime -->
                     <form id="timeDay">
                         <label>
                             <input class="checkbox" type="radio" name="period" value="day" id="dayRadio" checked> Dia
@@ -76,6 +84,8 @@
                         </label>
                     </form>
                 </div>
+
+                <!-- Container for the dynamic lists -->
                 <div class="list-container">
                     <div class="day-container">
                         <h2>Dia</h2>
